@@ -29,15 +29,15 @@ public abstract class MembershipPlan implements Billable{
     }
 
     public abstract String getPlanType();
-
+    @Override
     public abstract double calculateMonthlyNetPrice();
-
+    @Override
     public double calculateMonthlyGrossPrice(){
         return calculateMonthlyGrossPrice();
     };
 
     public double calculateTotalNetPrice(){
-        return calculateTotalNetPrice();
+        return calculateTotalNetPrice()*months;
     }
 
     public final void printSummary(){
