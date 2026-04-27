@@ -1,15 +1,15 @@
-public static void main(String[] args) {
+
     public class Main {
         public static void main(String[] args) {
             MembershipPlan[] plans = new MembershipPlan[] {
-                    new GymMembershipPlan("GYM-100", "Anna Kowalska", 3, 99.0, true, 12, false),
-                    new GymMembershipPlan("GYM-101", "Piotr Nowak", 6, 109.0, false, 18, true),
-                    new PersonalTrainingPlan("PT-200", "Marta Zielinska", 4, 140.0, true, 4, 2, false),
-                    new PersonalTrainingPlan("PT-201", "Jan Malinowski", 6, 150.0, false, 8, 3, true),
-                    new OnlineCoachingPlan("ONL-300", "Karolina Wisniewska", 6, 89.0, true, 2, true, true),
-                    new OnlineCoachingPlan("ONL-301", "Pawel Adamski", 3, 79.0, false, 1, false, true),
-                    new CorporateWellnessPlan("CORP-400", "TechNova Sp. z o.o.", 12, 350.0, true, 25, 2, true),
-                    new CorporateWellnessPlan("CORP-401", "SoftLine S.A.", 6, 320.0, false, 14, 0, false)
+                    new GymMembershipPlan(111, "Anna Kowalska", 3, true, 5, true, 6),
+                    new GymMembershipPlan(222, "Piotr Nowak", 6, false, 7, false, 3),
+                    new PersonalTrainingPlan(3, 3, true, 555, "Hana", 4, true, 7),
+                    new PersonalTrainingPlan(5, 2, false, 777, "Aice", 8, false, 9),
+                    new OnlineCoachingPlan(6, true, true, 999, "Vera", 2, true, 12),
+                    new OnlineCoachingPlan(4, false, false, 756, "Maria", 1, false, 3),
+                    new CorporateWellnessPlan(77, 4, true, 123, "Alla", 25, true, 6),
+                    new CorporateWellnessPlan(88, 6, false, 456, "Ivan", 14, false, 6)
             };
 
             double totalMonthlyNet = 0.0;
@@ -43,12 +43,8 @@ public static void main(String[] args) {
             System.out.println("Total monthly gross: " + totalMonthlyGross);
             System.out.println("Total contract net: " + totalContractNet);
 
-            Billable billable = new OnlineCoachingPlan("ONL-999", "Test Client", 2, 70.0, true, 1, false, true);
+            Billable billable = new OnlineCoachingPlan(4, true, true, 111, "Hanna", 15, false, 6);
             System.out.println("Billable net: " + billable.calculateMonthlyNetPrice());
             System.out.println("Billable gross: " + billable.calculateMonthlyGrossPrice());
         }
     }
-
-
-
-}
