@@ -1,9 +1,10 @@
 public abstract class MembershipPlan implements Billable{
-    int planCode;
-    String clientName;
-    int months;
-    double baseMonthlyFee;
-    boolean autoRenew;
+   private int planCode;
+   private String clientName;
+   private int months;
+   private double baseMonthlyFee;
+   private boolean autoRenew;
+   private int planDurationInMonths;
 
     public MembershipPlan(int planCode, String clientName, double baseMonthlyFee, boolean autoRenew) {
         this.planCode = planCode;
@@ -26,6 +27,10 @@ public abstract class MembershipPlan implements Billable{
 
     public boolean getIfAutoRenew() {
         return autoRenew;
+    }
+
+    public int getPlanDurationInMonths() {
+        return planDurationInMonths;
     }
 
     public abstract String getPlanType();
