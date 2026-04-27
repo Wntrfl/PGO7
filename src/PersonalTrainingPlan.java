@@ -38,6 +38,12 @@ public class PersonalTrainingPlan extends MembershipPlan {
 
     }
 
+    @Override
+
+    public String toString(){
+        return String.format ("Plan code: %s |Client Name: %s |Monthly Fee:%s| Sessions per Month:%s ",
+                getPlanCode(), getClientName(), getBaseMonthlyFee(), this.sessionsPerMonth);
+    }
 
 
 
