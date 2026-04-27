@@ -4,7 +4,7 @@ public class GymMembershipPlan extends MembershipPlan implements Freezable{
 
    public GymMembershipPlan (int planCode, String clientName, int entriesPerMonth, boolean saunaAccess,
                               double baseMonthlyFee, boolean autoRenew, int planDurationInMonths) {
-       super(planCode, clientName, baseMonthlyFee, autoRenew);
+       super(planCode, clientName, baseMonthlyFee, autoRenew, planDurationInMonths);
        this.entriesPerMonth = entriesPerMonth;
        this.saunaAccess = saunaAccess;
    }
